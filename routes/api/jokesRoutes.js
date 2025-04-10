@@ -29,7 +29,7 @@ router.get('/type/:type', (req, res) => {
     const type = req.params.type
     const url = 'https://api.sampleapis.com/jokes/goodJokes'
 
-    let typeArr
+    let typeArr = []
 
     axios.get(url)
         .then(resp => typeArr = resp.data.filter(item => item.type == type))
